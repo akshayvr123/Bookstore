@@ -9,7 +9,7 @@ const app=express()
 app.use(express.json());
 
 app.use(cors({
-    origin:["https://bookstorefrontend-akshay-vrs-projects.vercel.app/books"],
+    origin:["https://bookstorefrontend-gniurowk0-akshay-vrs-projects.vercel.app/"],
     methods:['POST','GET'],
     credentials:true
 }))
