@@ -5,11 +5,13 @@ import CreateBook from './Pages/CreateBook'
 import DeleteBook from './Pages/DeleteBook'
 import EditBook from './Pages/EditBook'
 import ShowBook from './Pages/ShowBook'
+import axios from 'axios'
 
 function App() {
  
-
+axios.defaults.withCredentials=true
   return (
+
    <Routes>
     <Route path='/' element={<Home/>}></Route>
     <Route path='/books/create' element={<CreateBook/>}></Route>

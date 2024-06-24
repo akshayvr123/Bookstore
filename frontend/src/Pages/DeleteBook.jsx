@@ -12,7 +12,7 @@ const DeleteBook = () => {
   const {enqueueSnackbar}=useSnackbar()
   const handleDeleteBook=()=>{
     setLoading(true)
-    axios.delete(`http://localhost:5555/books/${id}`)
+    axios.delete(`https://vercel.com/akshay-vrs-projects/bookstore_server/2QEeoz5LngPrVCqasSdLw3aZX3re/books/${id}`)
     .then(()=>{
       setLoading(false)
       enqueueSnackbar("Book deleted successfully",{variant:"success"})
