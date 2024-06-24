@@ -16,7 +16,13 @@ app.get('/', (req, res) => {
 })
 
 app.use('/books',booksRoute)
+app.use(express.static(path.join(__dirname, "front-end", "build")));
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "front-end", "build", "index.html"));
+  });
+
+  
 mongoose.connect(mongoDBURL)
 .then(()=>{
 console.log("App is connected to database");
